@@ -7,4 +7,10 @@ class Auth_m extends CI_Model
 	{
 		return $this->db->get_where($table, $where);
 	}
+	public function countTotalSiswa()
+	{
+		$sql = "SELECT * FROM siswa";
+		$query = $this->db->query($sql);
+		return $query->num_rows();
+	}
 }

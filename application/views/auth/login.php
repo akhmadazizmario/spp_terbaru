@@ -53,8 +53,6 @@
 
                 <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
 
-                <span class="d-block text-left my-4 text-muted"> or sign in with</span>
-
               </form>
             </div>
           </div>

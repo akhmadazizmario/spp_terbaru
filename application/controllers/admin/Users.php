@@ -20,7 +20,7 @@ class Users extends CI_Controller
 			$data['users'] = $this->User_m->cariDataUser();
 		}
 		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'required|trim');
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[12]');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[50]');
 		$this->form_validation->set_rules('alamat', 'alamat', 'required|trim');
 		$this->form_validation->set_rules('nohp', 'No hp', 'required|trim');
 		$this->form_validation->set_rules('level', 'level', 'required|trim');
@@ -63,7 +63,7 @@ class Users extends CI_Controller
 		$data['title'] = 'Ubah Data User ' . $data['users']['username'];
 
 		$this->form_validation->set_rules('nama', 'Nama Lengkap', 'required|trim');
-		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[12]');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|min_length[4]|max_length[50]');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[3]|max_length[12]');
 		$this->form_validation->set_rules('alamat', 'alamat', 'required|trim');
 		$this->form_validation->set_rules('nohp', 'nohp', 'required|trim');
@@ -71,6 +71,7 @@ class Users extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('layout/header', $data);
 			$this->load->view('layout/sidebar', $data);
+			$this->load->view('layout/topbar', $data);
 			$this->load->view('admin/users/ubah', $data);
 			$this->load->view('layout/footer');
 		} else {

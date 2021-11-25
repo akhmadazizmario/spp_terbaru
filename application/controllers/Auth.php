@@ -7,6 +7,7 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Auth_m');
+        $this->load->model('User_m');
     }
 
     public function index()
@@ -32,7 +33,7 @@ class Auth extends CI_Controller
             if (sha1($password) == $user['password']) {
                 $data = [
                     'username' => $user['username'],
-                    'id_user' => $user['id_user'],
+                    'level' => $user['level'],
                 ];
                 $this->session->set_userdata($data);
                 redirect('admin/dashboard');
@@ -45,7 +46,6 @@ class Auth extends CI_Controller
             redirect('auth');
         }
     }
-
     public function cekLogin()
     {
         if ($this->session->userdata('username')) {
