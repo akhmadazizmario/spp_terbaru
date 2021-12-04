@@ -56,6 +56,11 @@
               </form>
             </div>
           </div>
+          <br>
+          <center><a href="http://localhost/latihansppwebprogram/auth/registration/">
+              <font color="red">register?</font>
+            </a>
+          </center>
 
         </div>
 

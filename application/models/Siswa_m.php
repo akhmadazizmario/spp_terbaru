@@ -31,12 +31,12 @@ class Siswa_m extends CI_Model
 	{
 		return $this->db->get_where('guru', $idGuru)->row_array();
 	}
+
 	public function cariDataSiswa()
 	{
 		$keyword = $this->input->post('keyword', true);
 		$this->db->or_like('nama_siswa', $keyword);
 		$this->db->or_like('nis', $keyword);
-		$this->db->or_like('username', $keyword);
 		return $this->db->get('siswa')->result_array();
 	}
 }

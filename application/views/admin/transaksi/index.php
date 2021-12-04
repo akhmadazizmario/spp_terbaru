@@ -2,7 +2,7 @@
   <h1 class="h2"><?= $title; ?></h1>
   <div class="row mb-2">
     <div class="col-md-6">
-      <?= $this->session->flashdata('pesan'); ?>
+      <?= $this->session->flashdata('pesans3'); ?>
     </div>
   </div>
   <div class="row">

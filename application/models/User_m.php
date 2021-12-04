@@ -12,7 +12,14 @@ class User_m extends CI_Model
 	{
 		return $this->db->get($table);
 	}
-
+	public function simpanData($data = null)
+	{
+		$this->db->insert('users', $data);
+	}
+	public function cekData($where = null)
+	{
+		return $this->db->get_where('users', $where);
+	}
 	public function insert($table, $data)
 	{
 		$this->db->insert($table, $data);

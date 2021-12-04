@@ -13,4 +13,10 @@ class Auth_m extends CI_Model
 		$query = $this->db->query($sql);
 		return $query->num_rows();
 	}
+	public function countTotalUser()
+	{
+		$sql = "SELECT * FROM users";
+		$query = $this->db->query($sql);
+		return $query->num_rows();
+	}
 }

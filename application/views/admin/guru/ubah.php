@@ -4,7 +4,7 @@
   <?php if (validation_errors()) : ?>
     <div class="alert alert-danger" role="alert"><?= validation_errors(); ?></div>
   <?php endif; ?>
-  <?= $this->session->flashdata('pesan'); ?>
+  <?= $this->session->flashdata('pesans1'); ?>
   <div classs="container">
     <div class="card shadow mb-4">
       <div class="card-header py-3 bg-dark">

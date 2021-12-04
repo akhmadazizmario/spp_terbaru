@@ -13,10 +13,10 @@
               <div class="row">
                 <div class="col-md">
                   <?= form_open(''); ?>
-                  <input type="text" name="id_siswa" value="<?= $siswa['id_siswa']; ?>" readonly>
+                  <input type="text" name="id_siswa" class="form-control" value="<?= $siswa['id_siswa']; ?>" readonly>
                   <div class="form-group">
                     <label for="nis">NIS</label>
-                    <input type="text" name="nis" id="nis" class="form-control" value="<?= $siswa['nis']; ?>">
+                    <input type="text" name="nis" id="nis" class="form-control" value="<?= $siswa['nis']; ?>" readonly>
                     <small class="muted text-danger"><?= form_error('nis'); ?></small>
                   </div>
                   <div class="form-group">

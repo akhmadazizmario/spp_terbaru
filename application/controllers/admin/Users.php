@@ -41,7 +41,7 @@ class Users extends CI_Controller
 				'level' => html_escape($this->input->post('level', true))
 			];
 			$this->User_m->insert('users', $data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data User Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesans', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data User Berhasil Ditambahkan.</div>');
 			redirect('admin/users');
 		}
 	}
@@ -91,7 +91,7 @@ class Users extends CI_Controller
 		];
 		$this->db->where('id_user', $idUser);
 		$this->User_m->update('users', $data);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data User Berhasil Diubah.</div>');
+		$this->session->set_flashdata('pesans', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data User Berhasil Diubah.</div>');
 		redirect('admin/users');
 	}
 
@@ -99,7 +99,7 @@ class Users extends CI_Controller
 	public function hapus($id)
 	{
 		$this->db->delete('users', ['id_user' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data User Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesans', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data User Berhasil Dihapus.</div>');
 		redirect('admin/users');
 	}
 }

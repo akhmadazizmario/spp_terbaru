@@ -6,7 +6,7 @@
       <button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#formModalWali">
         <i class="fas fa-plus"></i> Tambah Data Wali Kelas
       </button>
-      <?= $this->session->flashdata('pesan'); ?>
+      <?= $this->session->flashdata('pesans4'); ?>
     </div>
   </div>
   <div class="card shadow mb-4">
@@ -56,8 +56,17 @@
               <div class="modal-body">
                 <?= form_open('admin/wali'); ?>
                 <div class="form-group">
-                  <label for="kelas">Kelas</label>
-                  <input type="text" name="kelas" id="kelas" class="form-control">
+                  <label for="kelas">kelas</label>
+                  <select name="kelas" id="kelas" class="form-control">
+                    <option value="">-- Pilih kelas --</option>
+                    <?php foreach ($guruWali as $g) : ?>
+                      <?php if ($g['kelas'] == $guru['kelas']) : ?> XII IPA
+                        <option value="<?= $g['kelas']; ?>" selected><?= $g['kelas']; ?></option>
+                      <?php else : ?>
+                        <option value="<?= $g['kelas']; ?>"><?= $g['kelas']; ?></option>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
+                  </select>
                   <small class="muted text-danger"><?= form_error('kelas'); ?></small>
                 </div>
                 <div class="form-group">

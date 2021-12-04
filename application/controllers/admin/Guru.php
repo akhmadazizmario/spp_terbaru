@@ -31,7 +31,7 @@ class Guru extends CI_Controller
 				'nama_guru' => html_escape($this->input->post('nama', true))
 			];
 			$this->Guru_m->insert('guru', $data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Guru Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesans1', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Guru Berhasil Ditambahkan.</div>');
 			redirect('admin/guru');
 		}
 	}
@@ -68,14 +68,14 @@ class Guru extends CI_Controller
 		];
 		$this->db->where('id_guru', $idGuru);
 		$this->Guru_m->update('guru', $data);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Guru Berhasil Diubah.</div>');
+		$this->session->set_flashdata('pesans1', '<div class="alert alert-success alert-message" role="alert"><i class="fas fa-info-circle"></i> Data Guru Berhasil Diubah.</div>');
 		redirect('admin/guru');
 	}
 
 	public function hapus($id)
 	{
 		$this->db->delete('guru', ['id_guru' => $id]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data Guru Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesans1', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data Guru Berhasil Dihapus.</div>');
 		redirect('admin/guru');
 	}
 }

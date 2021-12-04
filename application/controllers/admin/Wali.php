@@ -31,7 +31,7 @@ class Wali extends CI_Controller
 				'id_guru' => html_escape($this->input->post('nama', true))
 			];
 			$this->Wali_m->insert('wali_kelas', $data);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Wali Kelas Berhasil Ditambahkan.</div>');
+			$this->session->set_flashdata('pesans4', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Wali Kelas Berhasil Ditambahkan.</div>');
 			redirect('admin/wali');
 		}
 	}
@@ -64,14 +64,14 @@ class Wali extends CI_Controller
 		];
 		$this->db->where('kelas', $kelas);
 		$this->Wali_m->update('wali_kelas', $data);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Wali Kelas Berhasil Diubah.</div>');
+		$this->session->set_flashdata('pesans4', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> Data Wali Kelas Berhasil Diubah.</div>');
 		redirect('admin/wali');
 	}
 
 	public function hapus($kelas)
 	{
 		$this->db->delete('wali_kelas', ['kelas' => $kelas]);
-		$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data Wali Kelas Berhasil Dihapus.</div>');
+		$this->session->set_flashdata('pesans4', '<div class="alert alert-success" role="alert"><i class="fas fa-trash"></i> Data Wali Kelas Berhasil Dihapus.</div>');
 		redirect('admin/wali');
 	}
 }

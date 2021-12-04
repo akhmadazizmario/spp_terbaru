@@ -38,7 +38,7 @@ class Transaksi extends CI_Controller
         $idSiswa = $data['siswa']['id_siswa'];
 
         if ($data['siswa'] == null) {
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i> NIS Siswa <strong>' . $nis . '</strong> Tidak Terdaftar.</div>');
+            $this->session->set_flashdata('pesans3', '<div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i> NIS Siswa <strong>' . $nis . '</strong> Tidak Terdaftar.</div>');
             redirect('admin/transaksi');
         }
 
@@ -72,7 +72,7 @@ class Transaksi extends CI_Controller
             'ket' => 'Lunas'
         ];
         $this->Transaksi_m->update_where('spp', $data, $where);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> NIS <strong>' . $nis . '</strong> Berhasil Di Bayar.</div>');
+        $this->session->set_flashdata('pesans3', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> NIS <strong>' . $nis . '</strong> Berhasil Di Bayar.</div>');
         redirect('admin/transaksi');
     }
     public function batal($nis, $idSpp)
@@ -84,7 +84,7 @@ class Transaksi extends CI_Controller
             'ket' => 'Belum Lunas'
         ];
         $this->Transaksi_m->update_where('spp', $data, $where);
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i> NIM <strong>' . $nis . '</strong> SPP Berhasil Di Bayar.</div>');
+        $this->session->set_flashdata('pesans3', '<div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i>PEMBAYARAN dengan NIM <strong>' . $nis . '</strong> SPP Berhasil dibatalkan.</div>');
         redirect('admin/transaksi');
     }
 

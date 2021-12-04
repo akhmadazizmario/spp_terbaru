@@ -6,7 +6,7 @@
       <button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#formModalSiswa">
         <i class="fas fa-plus"></i> Tambah Data Siswa
       </button>
-      <?= $this->session->flashdata('pesan'); ?>
+      <?= $this->session->flashdata('pesans2'); ?>
     </div>
   </div>
   <div class="row mt-3">

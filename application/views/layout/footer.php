@@ -14,6 +14,7 @@
 <!-- Page level custom scripts -->
 <script src="http://localhost/latihansppwebprogram/assets/js/demo/chart-area-demo.js"></script>
 <script src="http://localhost/latihansppwebprogram/assets/js/demo/chart-pie-demo.js"></script>
+<!--- mengubah search file di ubahprofil jadi file gambar -->
 
 </body>
 <!----footer-------->
