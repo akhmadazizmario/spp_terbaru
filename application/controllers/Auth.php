@@ -18,6 +18,7 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'required|trim', ['required' => 'Password wajib di isi!.']);
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('auth/login', $data);
+            $this->load->view('layout/footer');
         } else {
             $this->_login();
         }

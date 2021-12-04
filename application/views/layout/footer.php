@@ -21,7 +21,7 @@
 <footer>
     <div>
         <center>
-            Copyright © 2021. All rights reserved.
+            Copyright© 2021.<font color="blue"> All rights reserved.</font>
             <!------END footer----->
     </div>
 </footer>
