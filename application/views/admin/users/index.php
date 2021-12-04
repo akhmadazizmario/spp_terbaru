@@ -96,7 +96,16 @@
                 </div>
                 <div class="form-group">
                   <label for="level">level</label>
-                  <input type="text" name="level" id="level" class="form-control">
+                  <select name="level" id="level" class="form-control">
+                    <option value="">-- Pilih level --</option>
+                    <?php foreach ($users as $u) : ?>
+                      <?php if ($u['level'] == $users['level']) : ?> admin
+                        <option value="<?= $u['level']; ?>" selected><?= $u['level']; ?></option>
+                      <?php else : ?>
+                        <option value="<?= $u['level']; ?>"><?= $u['level']; ?></option>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
+                  </select>
                   <small class="muted text-danger"><?= form_error('level'); ?></small>
                 </div>
                 <div class="form-group">
