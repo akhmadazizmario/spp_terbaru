@@ -32,10 +32,10 @@
                 <td><?= $g['kelas']; ?></td>
                 <td><?= $g['nama_guru']; ?></td>
                 <td>
-                  <a href="<?= base_url('admin/wali/ubahWali/') . $g['kelas']; ?>" class="btn btn-primary">
+                  <a href="<?= base_url('admin/walikelas/ubahWali/') . $g['kelas']; ?>" class="btn btn-primary">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <a href="<?= base_url('admin/wali/hapus/') . $g['kelas']; ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus ?')"><i class="fas fa-trash"></i></a>
+                  <a href="<?= base_url('admin/walikelas/hapus/') . $g['kelas']; ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus ?')"><i class="fas fa-trash"></i></a>
                 </td>
               </tr>
             <?php endforeach; ?>
@@ -54,7 +54,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <?= form_open('admin/wali'); ?>
+                <?= form_open('admin/walikelas'); ?>
                 <div class="form-group">
                   <label for="kelas">kelas</label>
                   <select name="kelas" id="kelas" class="form-control">

@@ -24,7 +24,7 @@
               <div class="row">
                 <div class="col-md">
 
-                  <?= form_open('admin/wali/ubahDataWali'); ?>
+                  <?= form_open('admin/walikelas/ubahDataWali'); ?>
                   <div class="form-group">
                     <label for="kelas">kelas</label>
                     <select name="kelas" id="kelas" class="form-control">
@@ -54,7 +54,7 @@
                     <small class="muted text-danger"><?= form_error('nama'); ?></small>
                   </div>
                   <div class="form-group">
-                    <a href="<?= base_url('admin/wali'); ?>" class="btn btn-secondary" data-dismiss="modal">Kembali</a>
+                    <a href="<?= base_url('admin/walikelas'); ?>" class="btn btn-secondary" data-dismiss="modal">Kembali</a>
                     <button type="submit" class="btn btn-dark">Ubah</button>
                   </div>
                   <?= form_close(); ?>

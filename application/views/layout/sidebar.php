@@ -37,7 +37,7 @@
          </a>
      </li>
      <li class="nav-item">
-         <a class="nav-link<?= $this->uri->segment(2) == 'wali' ? ' active' : '' ?>" href="<?= base_url('admin/wali'); ?>">
+         <a class="nav-link<?= $this->uri->segment(2) == 'walikelas' ? ' active' : '' ?>" href="<?= base_url('admin/walikelas'); ?>">
              <i class="fas fa-user-tie"></i>
              Data Wali Kelas
          </a>
